@@ -84,7 +84,7 @@ class App extends React.Component {
             <div>
                 <div className="label">pick.</div>
                 <div className="ui container">
-                    <Picker />
+                    
                     <div className="ui grid">
                         <div className="three wide column">
                             <GenreList onGenreClick = {this.onGenreClick}/>

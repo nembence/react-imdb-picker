@@ -23,3 +23,7 @@
     position: relative;
     left: 20px
 }
+
+.ui.secondary.vertical.pointing.menu {
+    font-size: 20px;
+}
