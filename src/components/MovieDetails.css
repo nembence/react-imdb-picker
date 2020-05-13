@@ -1,0 +1,32 @@
+.ui.active.centered.inline.loader{
+    position: relative;
+    top: 100px;
+}
+
+.ui.special.cards {
+    position: relative;
+    top: 10px;
+    left: 130px
+}
+
+.ui.card {
+    position: absolute;
+    top: 10px;
+    left: 460px
+}
+
+.header.star {
+    position: relative;
+    left: 105px;
+}
+
+.star.icon {
+    color: rgb(255, 175,3)
+}
+
+.netflix{
+    width: 200px;
+    position: absolute;
+    top: 180px;
+    left: 500px
+}
