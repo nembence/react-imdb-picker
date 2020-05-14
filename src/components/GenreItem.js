@@ -7,7 +7,7 @@ const GenreItem = ({ genre, selected, title, handleClick}) => {
             data-genre={genre}
             onClick={handleClick}
             >
-        {title}</div>
+        {genre}</div>
     );
 }
 

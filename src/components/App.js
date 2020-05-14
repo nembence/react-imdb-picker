@@ -1,9 +1,10 @@
 import React from 'react';
-import Picker from './Picker';
 import axios from 'axios';
 import './App.css';
 import GenreList from './GenreList';
 import MovieDetail from './MovieDetail';
+import Footer from './Footer';
+import Header from './Header';
 
 const KEY = 'f7065b9902mshac35905097f1209p1974c1jsn08530376a33a'
 const OMKEY = '27b96db8';
@@ -15,6 +16,7 @@ class App extends React.Component {
         randomMovie: null,
         netflixID: null
     }
+
     componentDidMount() {
         this.getMovies()
     }
@@ -70,24 +72,17 @@ class App extends React.Component {
         const random = Math.floor(Math.random() * filteredMovies.length-1);
         const selectedMovie = filteredMovies[random];
         this.setState({ randomMovie: selectedMovie })
-        console.log(selectedMovie);
-        this.getNetflix()
-    }
-
-    getNetflix = async (id) => {
-        const response = await axios.get('https://netflixroulette.net/api/v2/usa/imdb/?imdbId=tt0115641');
-        console.log(response)
     }
 
     render() {
         return(
             <div>
-                <div className="label">pick.</div>
+                <Header />
                 <div className="ui container">
-                    
+                    <div className="ui divider"></div>
                     <div className="ui grid">
                         <div className="three wide column">
-                            <GenreList onGenreClick = {this.onGenreClick}/>
+                            <GenreList onGenreClick ={this.onGenreClick}/>
                         </div>
                         <div className="thirten wide stretched column">
                             <div>
@@ -96,9 +91,7 @@ class App extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="ui inverted vertical footer segment form-page">
-                        <span className="pick">pick.</span>
-                </div>
+                <Footer />
             </div> 
         ); 
     }

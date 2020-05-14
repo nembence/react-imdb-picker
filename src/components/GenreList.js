@@ -19,7 +19,6 @@ class GenreList extends React.Component {
                 <GenreItem 
                     genre= {genre}
                     selected = {this.state.selected}
-                    title= {genre.charAt(0).toUpperCase() + genre.slice(1)}
                     handleClick= {this.handleClick}
                     key={genre}
                 />
